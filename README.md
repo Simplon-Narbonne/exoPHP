@@ -4,7 +4,7 @@ Forkez ce dépot à l'aide du bouton en haut à droite, puis clonez le fork obte
 Quand toutes les solutions vous semblent bonnes, faites une pull request (bouton à gauche "New pull request") pas de la branche master mais de celles comportant votre pseudo.
 
 ## Exo 1  
-Ajoutez/incluez le fichier header.php en début du fichier index.php et le fichier footer.php tout en bas afin de génèrer un fichier html complet  
+Ajoutez/incluez le fichier header.php en début du fichier index.php et le fichier footer.php tout en bas afin de générer un fichier html complet  
 
 ## Exo 2   
 Ajoutez la date du jour au format (exemple : 18 Mars 2017 ) et l'heure avec hh:mm:ss ( 10:45:46)  
