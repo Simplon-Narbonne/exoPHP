@@ -1,10 +1,14 @@
+<?php include("includes/header.php");
 
-<!-- Exo 2 -->
+setlocale (LC_TIME, 'fr_FR.utf8','fra');
+?>
     <p>
-      Nous sommes le : <br />
-      Il est :
+      <?php
+      $mois = array(1=>'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
+      $jours = array('dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi');
+      echo 'Nous sommes le '.$jours[date('w')].' '.date('j').' '.$mois[date('n')].' '.date('Y'); ?><br />
+      Il est : <?php echo date ('H:i:s'); ?>
     </p>
-
 <!-- Exo 3 -->
 <?php
 
@@ -14,4 +18,16 @@ $personnes = array(
   3 => array('prenom' => 'Marta', 'nom' => 'Blanca', 'telephone' => '003311111'),
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
+
+foreach($personnes as $element){
+  foreach ($element as $value){
+  }
+  if(in_array("Dain", $element)){
+    echo "Dain se trouve dans le tableau";
+  }
+}
+
 ?>
+
+
+<?php include("includes/footer.php"); ?>
