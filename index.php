@@ -40,26 +40,41 @@ else
 */
 
 
-/* fonction qui prend un tableau et une chaine de caractere en parametre et retourne vrai si la personne est present dans le tableau en question */
-function chercherMmeDain($tableau,$prs){
-    $trouve = false;
+/* fonction qui prend un tableau et une chaine de caractere en parametre et retourne vrai si la personne est present dans le tableau en question
 
-    foreach ($tableau as $personne){
-      if ($personne===$prs)
-        {
-          $trouve = true;
-          return $trouve;
-        }
-      else
-        {
-          return $trouve;
-        }
-    }
+if ($personne===$prs)
+  {
+    $trouve = true;
+    return $trouve;
+  }
+else
+  {
+    return $trouve;
   }
 
-$madameDain = "Dain";
 
-if(chercherMmeDain($personnes,$madameDain))
+*/
+function chercherMmeDain($tableau,$prs){
+
+    $trouve = false;
+
+    foreach($tableau as $key => $value){
+      foreach($value as $v){
+        if($v == $prs)
+          {
+            $trouve = true;
+            return $trouve;
+          }
+      }
+    }
+    return $trouve;
+  };
+
+$madameDain = 'Dain';
+$alors = chercherMmeDain($personnes,$madameDain);
+echo $alors;
+
+if($alors)
 {
     echo "<p>Oui elle y est !!!</p>";
 }
