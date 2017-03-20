@@ -1,8 +1,8 @@
-
+<?php include("includes/header.php"); ?>
 <!-- Exo 2 -->
     <p>
-      Nous sommes le : <br />
-      Il est :
+      Nous sommes le : <?php echo date('d/m/Y'); ?>.<br />
+      Il est :<?php echo date('h:i:s'); ?>
     </p>
 
 <!-- Exo 3 -->
@@ -14,4 +14,14 @@ $personnes = array(
   3 => array('prenom' => 'Marta', 'nom' => 'Blanca', 'telephone' => '003311111'),
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
+foreach ($personnes as $value) {
+  foreach ($value as $nom) {
+  }
+  if (in_array('Dain', $value))
+  {
+    echo 'La valeur "Dain" se trouve dans le tableau !';
+  }
+}
 ?>
+
+<?php include("includes/footer.php"); ?>
