@@ -1,8 +1,8 @@
-
+<?php include "./includes/header.php" ?>
 <!-- Exo 2 -->
     <p>
-      Nous sommes le : <br />
-      Il est :
+      Nous sommes le : <?php echo date('d/m/Y'); ?><br />
+      Il est : <?php echo date('h:i:s'); ?>
     </p>
 
 <!-- Exo 3 -->
@@ -15,3 +15,15 @@ $personnes = array(
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
 ?>
+<?php
+foreach ($personnes as $element) {
+  foreach ($element as $value) {
+    echo $value . '<br/>';
+  }
+  if (in_array('Dain', $element)) {
+    echo 'Le prénom Dain est apparu <br/>';
+  }
+}
+
+?>
+<?php include "./includes/footer.php" ?>
