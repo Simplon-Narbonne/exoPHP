@@ -35,5 +35,17 @@ else
   echo "<p>Non elle n'y est pas !!!</p>";
   }
 
+ /*la methode avec le foreach*/
+  foreach ($personnes as $personne){
+    if ($personne==="Dain")
+      {
+      echo "<p>Oui elle y est !!!</p>";
+      }
+    else
+      {
+      echo "<p>Non elle n'y est toujours pas meme avec un foreach !!!</p>";
+      }
+  }
+
 ?>
 <?php include './includes/footer.php' ?>
