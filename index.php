@@ -25,6 +25,7 @@ $personnes = array(
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
 
+/*la methode avec is_array()*/
 if (in_array("Dain", $personnes))
   {
   echo "<p>Oui elle y est !!!</p>";
