@@ -1,4 +1,4 @@
-
+<?php include './includes/header.php' ?>
 <!-- Exo 2 -->
     <p>
       Nous sommes le : <br />
@@ -15,3 +15,4 @@ $personnes = array(
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
 ?>
+<?php include './includes/footer.php' ?>
