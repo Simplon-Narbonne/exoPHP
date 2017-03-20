@@ -25,7 +25,7 @@ $personnes = array(
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
 
-/*la methode avec is_array()*/
+/*la methode avec is_array()
 if (in_array("Dain", $personnes))
   {
   echo "<p>Oui elle y est !!!</p>";
@@ -34,18 +34,32 @@ else
   {
   echo "<p>Non elle n'y est pas !!!</p>";
   }
+*/
 
- /*la methode avec le foreach*/
-  foreach ($personnes as $personne){
-    if ($personne==="Dain")
-      {
-      echo "<p>Oui elle y est !!!</p>";
-      }
-    else
-      {
-      echo "<p>Non elle n'y est toujours pas meme avec un foreach !!!</p>";
-      }
+function chercherMmeDain($tableau){
+    $trouve = false;
+
+    foreach ($tableau as $personne){
+      if ($personne==="Dain")
+        {
+          $trouve = true;
+          return $trouve;
+        }
+      else
+        {
+        return $trouve;
+        }
+    }
   }
+
+if(chercherMmeDain($personnes))
+{
+    echo "<p>Oui elle y est !!!</p>";
+}
+else
+{
+    echo "<p>Non elle n'y est pas !!!</p>";
+}
 
 ?>
 <?php include './includes/footer.php' ?>
