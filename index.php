@@ -3,14 +3,17 @@
 <?php
 // Enregistrons les informations de date dans des variables
 
+$mesMois = array("Janvier", "Fevrier", "Mars", "Avril", "Mai" ,"Juin", "Juillet");
+
 $jour = date('d');
 $mois = date('m');
 $annee = date('Y');
 
 $heure = date('H');
 $minute = date('i');
+$seconde = date('s');
 
-echo "<p>Nous sommes le : " . $jour . " ". $mois . " ". $annee ."<br />Il est : " . $heure . ":" . $minute . "</p>";
+echo "<p>Nous sommes le : " . $jour . " ". $mesMois[$mois - 1] . " ". $annee ."<br />Il est : " . $heure . ":" . $minute . ":" . $seconde . "</p>";
 
  ?>
 
