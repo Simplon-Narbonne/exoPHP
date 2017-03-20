@@ -25,7 +25,7 @@ $personnes = array(
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
 
-/*la methode avec is_array()
+/* la methode avec is_array()
 if (in_array("Dain", $personnes))
   {
   echo "<p>Oui elle y est !!!</p>";
@@ -36,11 +36,13 @@ else
   }
 */
 
-function chercherMmeDain($tableau){
+
+/* fonction qui prend un tableau et une chaine de caractere en parametre et retourne vrai si la personne est present dans le tableau en question */
+function chercherMmeDain($tableau,$prs){
     $trouve = false;
 
     foreach ($tableau as $personne){
-      if ($personne==="Dain")
+      if ($personne===$prs)
         {
           $trouve = true;
           return $trouve;
@@ -52,7 +54,9 @@ function chercherMmeDain($tableau){
     }
   }
 
-if(chercherMmeDain($personnes))
+$madameDain = "Dain";
+
+if(chercherMmeDain($personnes,$madameDain))
 {
     echo "<p>Oui elle y est !!!</p>";
 }
