@@ -21,7 +21,7 @@ foreach ($personnes as $element) {
     echo $value . '<br/>';
   }
   if (in_array('Dain', $element)) {
-    echo 'Le prénom Dain est apparu <br/>';
+    echo 'Le nom Dain est apparu <br/>';
   }
 }
 
