@@ -1,7 +1,9 @@
-<?php include './includes/header.php' ?>
+<?php /* include './includes/header.php' */ ?>
+<?php include_once('includes/header.php'); ?>
 <!-- Exo 2 -->
 <?php
 // Enregistrons les informations de date dans des variables
+date_default_timezone_set('America/Los_Angeles');
 
 $mesMois = array("Janvier", "Fevrier", "Mars", "Avril", "Mai" ,"Juin", "Juillet");
 
@@ -28,31 +30,22 @@ $personnes = array(
   4 => array('prenom' => 'John', 'nom' => 'Doe', 'telephone' => '004411111')
 );
 
-/* la methode avec is_array()
-if (in_array("Dain", $personnes))
-  {
-  echo "<p>Oui elle y est !!!</p>";
-  }
-else
-  {
-  echo "<p>Non elle n'y est pas !!!</p>";
-  }
-*/
+
+/* la methode avec is_array() correction
+foreach ($personnes as $key => $value) {
+  # code...
+  if (in_array("Dain", $value))
+    {
+    echo "<p>Oui elle y est !!!</p>";
+    }
+  else
+    {
+    echo "<p>Non elle n'y est pas !!!</p>";
+    }
+}*/
 
 
 /* fonction qui prend un tableau et une chaine de caractere en parametre et retourne vrai si la personne est present dans le tableau en question
-
-if ($personne===$prs)
-  {
-    $trouve = true;
-    return $trouve;
-  }
-else
-  {
-    return $trouve;
-  }
-
-
 */
 function chercherMmeDain($tableau,$prs){
 
